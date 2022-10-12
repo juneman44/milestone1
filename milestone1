@@ -1,0 +1,38 @@
+def s(dna):
+  dna = dna.upper()
+  count_A = dna.count('A')
+  count_C = dna.count('C')
+  count_G = dna.count('G')
+  count_T = dna.count('T')
+  answer = {'A':count_A, 'C':count_C, 'G':count_G, 'T':count_T}
+  return answer
+  
+  
+def dna2rna(dna):
+    rna = ''
+    rna=rna.upper()
+    for symbol in dna:
+        if symbol == 'A':
+              rna = rna + 'A'
+        elif symbol == 'T':
+              rna = rna + 'U'
+        elif symbol == 'G':
+              rna = rna + 'G'
+        elif symbol == 'C':
+              rna = rna + 'C'
+    return rna
+  
+  
+def reverse_complement(dna):
+    reverse = ''
+    for dna2 in dna:
+        if dna2 == 'A':
+              dna2 ='T'
+        elif dna2 == 'T':
+              dna2 ='A'
+        elif dna2 == 'G':
+              dna2 ='C'
+        elif dna2 == 'C':
+              dna2 ='G'    
+        reverse = dna2 + reverse
+    return reverse
